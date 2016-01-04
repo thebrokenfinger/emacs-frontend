@@ -2,5 +2,5 @@
 The emacs configuration for frontend developers
 
 #### Modes used
-- web-mode.el[http://web-mode.org]
-- scss-mode.el[https://github.com/antonj/scss-mode]
+- [[http://web-mode.org][web-mode.el]]
+- [[https://github.com/antonj/scss-mode][scss-mode.el]]
