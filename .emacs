@@ -14,7 +14,7 @@
  )
 
 ;; backup files directory
-(setq backup-directory-alist `(("." . "~/.saves")))
+(setq backup-directory-alist `(("." . "PATH/TO/BACKUP_DIRECTORY")))
 
 ;; tabs setting
 (setq tab-width 2)
