@@ -1,9 +1,10 @@
 # emacs-frontend
-The emacs configuration for frontend developers
+The emacs configuration file for frontend developers
 
 #### Modes used
 - [web-mode.el](http://web-mode.org)
 - [scss-mode.el](https://github.com/antonj/scss-mode)
+- [direx.el]()
 
 ## Setup
 * Download and place the .emacs file in your home directory
