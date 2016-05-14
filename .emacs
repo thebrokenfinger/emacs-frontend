@@ -16,6 +16,9 @@
 ;; backup files directory
 (setq backup-directory-alist `(("." . "PATH/TO/BACKUP_DIRECTORY")))
 
+;; auto completion
+(ac-config-default)
+
 ;; tabs setting
 (setq tab-width 2)
 (setq js-indent-level 2)
