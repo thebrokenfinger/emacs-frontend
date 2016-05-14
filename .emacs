@@ -29,6 +29,12 @@
 (when (fboundp 'electric-indent-mode) (electric-indent-mode -1))
 (ido-mode 1)
 
+;; melpa package settings
+(require 'package)
+(package-initialize)
+(add-to-list 'package-archives
+         '("melpa" . "http://melpa.milkbox.net/packages/") t)
+
 ;; jsx/html support
 (require 'web-mode)
 (add-to-list 'auto-mode-alist '("\\.html\\'" . web-mode))
