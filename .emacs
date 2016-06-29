@@ -14,7 +14,7 @@
  )
 
 ;; backup files directory
-(setq backup-directory-alist `(("." . "PATH/TO/BACKUP_DIRECTORY")))
+(setq backup-directory-alist `(("." . "~/.emacs.d/auto-save-list/")))
 
 ;; auto completion
 (ac-config-default)
@@ -28,14 +28,12 @@
 ;; autoindent settings
 (when (fboundp 'electric-indent-mode) (electric-indent-mode -1))
 (ido-mode 1)
-
-;; melpa package settings
 (require 'package)
 (package-initialize)
 (add-to-list 'package-archives
          '("melpa" . "http://melpa.milkbox.net/packages/") t)
 
-;; jsx/html support
+;; ;; jsx/html support
 (require 'web-mode)
 (add-to-list 'auto-mode-alist '("\\.html\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.hbs\\'" . web-mode))
@@ -51,6 +49,10 @@
 (setq web-mode-attr-indent-offset 2)
 (setq-default indent-tabs-mode nil)
 
+(load "~/.emacs.d/site-lisp/color-theme-g0sub.el")
+(require 'color-theme-g0sub)
+(color-theme-g0sub)
+
 ;; sass support
 (require 'scss-mode)
 (autoload 'scss-mode "scss-mode")
@@ -59,6 +61,5 @@
 (setq css-indent-offset 2)
 
 ;; directory structure
-(require 'direx)
-(global-set-key (kbd "C-x C-j") 'direx:jump-to-directory)
-
+;; (require 'direx)
+;; (global-set-key (kbd "C-x C-j") 'direx:jump-to-directory)
