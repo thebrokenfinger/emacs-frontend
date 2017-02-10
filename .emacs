@@ -19,6 +19,10 @@
 ;; auto completion
 (ac-config-default)
 
+;; font setup
+(add-to-list 'default-frame-alist
+             '(font . "DejaVu Sans Mono-13"))
+
 ;; tabs setting
 (setq tab-width 2)
 (setq js-indent-level 2)
@@ -33,11 +37,12 @@
 (add-to-list 'package-archives
          '("melpa" . "http://melpa.milkbox.net/packages/") t)
 
-;; ;; jsx/html support
+;; jsx/html support
 (require 'web-mode)
 (add-to-list 'auto-mode-alist '("\\.html\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.hbs\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.js[x]?\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.ts\\'" . web-mode))
 
 (setq web-mode-content-types-alist
   '(("json" . "\\.api\\'")
@@ -61,5 +66,5 @@
 (setq css-indent-offset 2)
 
 ;; directory structure
-;; (require 'direx)
-;; (global-set-key (kbd "C-x C-j") 'direx:jump-to-directory)
+(require 'direx)
+(global-set-key (kbd "C-x C-j") 'direx:jump-to-directory)
